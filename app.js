@@ -11,7 +11,7 @@ var serviceRouter= require('./src/routes/service.routes');
 var saleRouter = require ('./src/routes/sale.routes');
 var app = express();
 const db= require('./src/models');
-db.sequelize.sync();
+db.sequelize.sync({ force: true });
 // view engine setup
 app.set('views', path.join(__dirname, 'src/views'));
 app.set('view engine', 'jade');

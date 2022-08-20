@@ -14,6 +14,11 @@ module.exports = (sequalize, Sequalize) => {
                 type: Sequalize.STRING
             }
         },
+        {
+            timestamps: false,
+            createdAt: false,
+            updatedAt: false,
+        }
     );
     return PetOwner;
 };

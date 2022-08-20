@@ -18,7 +18,7 @@ module.exports = (sequalize, Sequalize) => {
                 type: Sequalize.INTEGER
             },
             description: {
-                type: Sequalize.STRING
+                type: Sequalize.TEXT('long')
             },
             isVeterinary: {
                 type: Sequalize.BOOLEAN
@@ -27,6 +27,11 @@ module.exports = (sequalize, Sequalize) => {
                 type: Sequalize.STRING
             }
         },
+        {
+            timestamps: false,
+            createdAt: false,
+            updatedAt: false,
+        }
     );
     return Local;
 };

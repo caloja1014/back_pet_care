@@ -15,6 +15,11 @@ module.exports = (sequalize, Sequalize) => {
                 type: Sequalize.FLOAT
             },
         },
+        {
+            timestamps: false,
+            createdAt: false,
+            updatedAt: false,
+        }
     );
     return Product;
 };

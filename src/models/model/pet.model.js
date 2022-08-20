@@ -18,6 +18,11 @@ module.exports = (sequalize, Sequalize) => {
                 type: Sequalize.INTEGER
             },
         },
+        {
+            timestamps: false,
+            createdAt: false,
+            updatedAt: false,
+        }
     );
     return Pet;
 };

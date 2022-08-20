@@ -11,13 +11,14 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
     */
-    await queryInterface.bulkInsert('owner', fakeData.owner, {});
-    await queryInterface.bulkInsert('product', fakeData.product, {});
-    await queryInterface.bulkInsert('local', fakeData.local, {});
-    await queryInterface.bulkInsert('inventory', fakeData.inventory, {});
-    await queryInterface.bulkInsert('pet', fakeData.p, {});
-    await queryInterface.bulkInsert('service', fakeData.service, {});
-    await queryInterface.bulkInsert('sale', fakeData.sale, {});
+    await queryInterface.bulkInsert('owners', fakeData.owner, {});
+    await queryInterface.bulkInsert('products', fakeData.product, {});
+    await queryInterface.bulkInsert('locals', fakeData.local, {});
+    await queryInterface.bulkInsert('inventories', fakeData.inventory, {});
+    await queryInterface.bulkInsert('petowners', fakeData.petOwner, {});
+    await queryInterface.bulkInsert('pets', fakeData.pet, {});
+    await queryInterface.bulkInsert('services', fakeData.service, {});
+    await queryInterface.bulkInsert('sales', fakeData.sale, {});
   },
 
   async down(queryInterface, Sequelize) {

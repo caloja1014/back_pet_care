@@ -1,3 +1,4 @@
+
 module.exports = (sequalize, Sequalize) => {
     const Service = sequalize.define(
         'service',
@@ -12,12 +13,17 @@ module.exports = (sequalize, Sequalize) => {
                 type: Sequalize.STRING
             },
             description: {
-                type: Sequalize.STRING
+                type: Sequalize.TEXT('long')
             },
             price: {
                 type: Sequalize.FLOAT
             }
         },
+        {
+            timestamps: false,
+            createdAt: false,
+            updatedAt: false,
+        }
     );
     return Service;
 };

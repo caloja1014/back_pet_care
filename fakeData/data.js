@@ -1,7 +1,7 @@
 module.exports = {
     owner: [
         {
-            identification: '0951690148',
+            identification: '0951690145',
             name: 'Carlos',
             lastName: 'Loja',
             age: 34
@@ -23,20 +23,17 @@ module.exports = {
         {
             identification: '0951390148',
             name: 'Akimi',
-            lastName: 'Guerrero',
-            age: 34
+            lastName: 'Guerrero'
         },
         {
             identification: '0151690140',
             name: 'Nohelia',
-            lastName: 'Intriago',
-            age: 45
+            lastName: 'Intriago'
         },
         {
             identification: '0951690318',
             name: 'Andres',
-            lastName: 'Quintero',
-            age: 19
+            lastName: 'Quintero'
         }
     ],
     product: [
@@ -62,24 +59,24 @@ module.exports = {
             breed: 'Pitbull',
             name: 'Oreo',
             age: 5,
-            ownerIdentification: '0951390148'
+            petownerIdentification: '0951390148'
         },
         {
             id: 2,
             breed: 'Pitbull',
             name: 'Hela',
             age: 3,
-            ownerIdentification: '0951390148'
+            petownerIdentification: '0951390148'
         },
         {
             id: 3,
             breed: 'Chiguagua',
             name: 'Pancracio',
             age: 5,
-            ownerIdentification: '0151690140'
+            petownerIdentification: '0151690140'
         }
     ],
-    local:[
+    local: [
         {
             id: 1,
             name: 'Carlitos Vet',
@@ -88,7 +85,7 @@ module.exports = {
             description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
             smallDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been",
             isVeterinary: true,
-            ownerIdentification: '0951690148'
+            ownerIdentification: '0951690145'
         },
         {
             id: 2,
@@ -120,14 +117,14 @@ module.exports = {
     ],
     service: [
         {
-            id:1,
+            id: 1,
             name: "Peinar perro",
             description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
             price: 40.22,
             localId: 1
         },
         {
-            id:2,
+            id: 2,
             name: "Pasear perro",
             description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
             price: 4.22,
@@ -142,7 +139,7 @@ module.exports = {
             serviceId: 1
         },
         {
-            id: 1,
+            id: 2,
             value: 4,
             petId: 1,
             serviceId: 2
