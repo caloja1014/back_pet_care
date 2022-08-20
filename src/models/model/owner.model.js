@@ -16,7 +16,10 @@ module.exports = (sequalize, Sequalize) => {
             },
             lastName: {
                 type: Sequalize.STRING
-            }
+            },
+            age: {
+                type: Sequalize.INTEGER
+            },
         },
     );
     return Owner;

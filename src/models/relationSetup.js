@@ -1,11 +1,13 @@
 const relationSetup = (sequelize) => {
-    const { owner, local, pet, product, sale, service } = sequelize.models;
-    owner.hasMany(pet);
-    pet.belongsTo(owner);
+    const { petowner, local, pet, product, sale, service, inventory,owner } = sequelize.models;
+    petowner.hasMany(pet);
+    pet.belongsTo(petowner);
+    owner.hasMany(local);
+    local.belongsTo(owner);
     local.hasMany(service);
     service.belongsTo(local);
-    local.hasMany(product);
-    product.belongsTo(local);
+    local.belongsToMany(product, { through: inventory});
+    product.belongsToMany(local, { through: inventory});
     pet.belongsToMany(service, { through: sale });
     service.belongsToMany(pet, { through: sale });
 

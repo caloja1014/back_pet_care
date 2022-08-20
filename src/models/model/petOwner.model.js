@@ -1,6 +1,6 @@
 module.exports = (sequalize, Sequalize) => {
-    const Local = sequalize.define(
-        'local',
+    const PetOwner = sequalize.define(
+        'petowner',
         {
             id: {
                 allowNull: false,
@@ -8,22 +8,16 @@ module.exports = (sequalize, Sequalize) => {
                 primaryKey: true,
                 type: Sequalize.INTEGER
             },
-            latitude: {
-                type: Sequalize.INTEGER
-            },
-            longitude: {
-                type: Sequalize.INTEGER
-            },
-            description: {
+            identification: {
                 type: Sequalize.STRING
             },
-            isVeterinary: {
-                type: Sequalize.BOOLEAN
+            name: {
+                type: Sequalize.STRING
             },
-            smallDescription: {
+            lastName: {
                 type: Sequalize.STRING
             }
         },
     );
-    return Local;
+    return PetOwner;
 };
