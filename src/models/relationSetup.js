@@ -10,3 +10,5 @@ const relationSetup = (sequelize) => {
     Service.belongsToMany(Pet, { through: Sale });
 
 }
+
+module.exports = {relationSetup};
