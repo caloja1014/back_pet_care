@@ -2,14 +2,10 @@ module.exports = (sequalize, Sequalize) => {
     const PetOwner = sequalize.define(
         'petowner',
         {
-            id: {
-                allowNull: false,
-                autoIncrement: true,
-                primaryKey: true,
-                type: Sequalize.INTEGER
-            },
             identification: {
-                type: Sequalize.STRING
+                type: Sequalize.STRING,
+                allowNull: false,
+                primaryKey: true,
             },
             name: {
                 type: Sequalize.STRING
