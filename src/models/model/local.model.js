@@ -8,6 +8,9 @@ module.exports = (sequalize, Sequalize) => {
                 primaryKey: true,
                 type: Sequalize.INTEGER
             },
+            name: {
+                type: Sequalize.STRING
+            },
             latitude: {
                 type: Sequalize.INTEGER
             },
