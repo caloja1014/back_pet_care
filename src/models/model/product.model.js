@@ -6,7 +6,7 @@ module.exports = (sequalize, Sequalize) => {
                 allowNull: false,
                 autoIncrement: true,
                 primaryKey: true,
-                type: DataTypes.INTEGER
+                type: Sequalize.INTEGER
             },
             name: {
                 type: Sequalize.STRING

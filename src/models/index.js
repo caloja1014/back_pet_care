@@ -1,6 +1,5 @@
-const dbConfig = require("../config/db.config.js");
+const dbConfig = require("../configs/db.config.js");
 const Sequelize = require("sequelize");
-const { relationSetup } = require('./relationSetup');
 const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
     host: dbConfig.HOST,
     dialect: dbConfig.dialect,
@@ -12,6 +11,8 @@ const sequelize = new Sequelize(dbConfig.DB, dbConfig.USER, dbConfig.PASSWORD, {
         idle: dbConfig.pool.idle
     }
 });
+const { relationSetup } = require('./relationSetup');
+
 const modelDefiners = [
     require('./model/local.model'),
     require('./model/owner.model'),
