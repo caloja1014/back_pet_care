@@ -8,8 +8,14 @@ module.exports = (sequalize, Sequalize) => {
                 primaryKey: true,
                 type: Sequalize.INTEGER
             },
+            name: {
+                type: Sequalize.STRING
+            },
             description: {
                 type: Sequalize.STRING
+            },
+            price: {
+                type: Sequalize.FLOAT
             }
         },
     );
