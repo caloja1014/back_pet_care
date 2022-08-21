@@ -4,7 +4,6 @@ const Op = db.Sequelize.Op;
 
 // CREATE AND SAVE A PET OWNER
 exports.create = (req, res) => {
-    console.log(req.body)
     if(!req.body.identification || !req.body.name || !req.body.lastName) {
         res.status(400).send({
             message: "Content can not be empty!"
@@ -15,7 +14,7 @@ exports.create = (req, res) => {
     const petOwner = {
         identification: req.body.identification,
         name: req.body.name,
-        lastname: req.body.lastname
+        lastName: req.body.lastName
     }
     PetOwner.create(petOwner)
     .then(data => {
