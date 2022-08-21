@@ -13,6 +13,8 @@ var petOwnerRouter = require('./src/routes/petOwner.routes');
 var petRouter = require('./src/routes/pet.routes');
 var localRouter = require('./src/routes/local.routes');
 var productRouter = require('./src/routes/product.routes');
+var inventoryRouter = require('./src/routes/inventory.routes');
+
 var app = express();
 const db= require('./src/models');
 db.sequelize.sync();
@@ -35,6 +37,8 @@ app.use('/petOwner', petOwnerRouter);
 app.use('/pet', petRouter);
 app.use('/local', localRouter);
 app.use('/product', productRouter);
+app.use('/inventory',inventoryRouter);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

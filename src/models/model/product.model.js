@@ -1,4 +1,4 @@
-module.exports = (sequalize, Sequalize) => {
+module.exports = (sequalize, DataTypes) => {
     const Product = sequalize.define(
         'product',
         {
@@ -6,13 +6,13 @@ module.exports = (sequalize, Sequalize) => {
                 allowNull: false,
                 autoIncrement: true,
                 primaryKey: true,
-                type: Sequalize.INTEGER
+                type: DataTypes.INTEGER
             },
             name: {
-                type: Sequalize.STRING
+                type: DataTypes.STRING
             },
             price: {
-                type: Sequalize.FLOAT
+                type: DataTypes.FLOAT
             },
         },
         {
@@ -23,3 +23,35 @@ module.exports = (sequalize, Sequalize) => {
     );
     return Product;
 };
+
+
+/*'use strict';
+const {
+  Model
+} = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
+  class product extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.j
+     *//*
+     static associate(models) {
+        // define association here
+      }
+    };
+    product.init({
+      id: {
+          allowNull: false,
+          autoIncrement: true,
+          primaryKey: true,
+          type: DataTypes.INTEGER
+      },
+      name: DataTypes.STRING,
+      price: DataTypes.FLOAT
+    }, {
+      sequelize,
+      modelName: 'product',
+    });
+    return product;
+  };*/

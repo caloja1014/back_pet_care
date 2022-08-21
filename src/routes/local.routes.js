@@ -1,11 +1,9 @@
 var express = require('express');
 var router = express.Router();
-var localController = require('../controllers/local.controller');
+var Local = require('../controllers/local.controller');
 
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+router.post('/', Local.create);
+router.put('/:id', Local.update);
 
 module.exports = router;
-
 
