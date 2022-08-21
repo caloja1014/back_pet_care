@@ -1,8 +1,8 @@
 const db = require("../models");
-const Pet = db.Pet;
+const Pet = db.pet;
 const Op = db.Sequelize.Op;
 
-// CREATE AND SAVE A PET OWNER
+// CREATE AND SAVE A PET
 exports.create = (req, res) => {
     if(!req.body.id || !req.body.petownerIdentification || !req.body.name) {
         res.status(400).send({
@@ -34,7 +34,7 @@ exports.create = (req, res) => {
 exports.findAll = (req, res) => {
     const petownerIdentification = req.params.petownerIdentification;
     var condition = petownerIdentification ? { petownerIdentification: { [Op.like]: `%${petownerIdentification}%` } } : null;
-    PetOwner.update(req.body, {
+    Pet.findAll({
         where: condition
     })
     .then(data => {
@@ -42,7 +42,7 @@ exports.findAll = (req, res) => {
     })
     .catch(err => {
         res.status(500).send({
-            message: "Some error occurred while retrieving pets."
+            message: "Some error occurred while retrieving Pets."
         });
     })
 };
