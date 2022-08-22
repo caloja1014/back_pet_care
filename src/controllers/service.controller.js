@@ -3,7 +3,7 @@ const Service = db.service;
 const Op = db.Sequelize.Op;
 
 exports.create = async (req, res) => {
-    if (!req.body.ownerIdentification || !req.body.name) {
+    if (!req.body.localId || !req.body.name) {
         res.status(400).send({
             message: "Content can not be empty!"
         });
@@ -11,7 +11,11 @@ exports.create = async (req, res) => {
     const service = {
         ...req.body
     };
+    service.localId=Number(service.localId);
+    service.price=Number(service.price);
+
     try {
+        console.log(service);
         const data = await Service.create(service);
         res.send(data);
     } catch (err) {

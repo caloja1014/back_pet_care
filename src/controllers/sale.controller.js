@@ -8,11 +8,15 @@ exports.create = async (req, res) => {
             message: "Content can not be empty!"
         });
     }
-    const service = {
+    const sale = {
         ...req.body
     };
+    sale.petId = Number(sale.petId);
+    sale.serviceId = Number(sale.serviceId);
+    sale.value = Number(req.body.value);
+    console.log(sale);
     try {
-        const data = await Sale.create(service);
+        const data = await Sale.create(sale);
         res.send(data);
     } catch (err) {
         res.status(500).send({
