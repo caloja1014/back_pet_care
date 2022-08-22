@@ -17,7 +17,7 @@ var inventoryRouter = require('./src/routes/inventory.routes');
 
 var app = express();
 const db= require('./src/models');
-db.sequelize.sync();
+db.sequelize.sync({force:  true});
 // view engine setup
 app.set('views', path.join(__dirname, 'src/views'));
 app.set('view engine', 'jade');
