@@ -28,6 +28,21 @@ exports.create = (req, res) => {
     })
 };
 
+// GET ALL PET OWNERS
+exports.findAll = (req, res) => {
+    PetOwner.findAll({
+        
+    })
+    .then(data => {
+        res.send(data);
+    })
+    .catch(err => {
+        res.status(500).send({
+            message: "Some error occurred while retrieving PetOwners."
+        });
+    })
+};
+
 // UPDATE A PET OWNER BY ID
 exports.update = (req, res) => {
     const identification = req.params.identification;
