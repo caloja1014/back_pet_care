@@ -1,21 +1,21 @@
 {
   "development": {
-    "username": "root",
-    "password": "caloja",
+    "username": "pet_care_user",
+    "password": "#Pet_care_123",
     "database": "pet_care",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": "caloja",
+    "username": "pet_care_user",
+    "password": "#Pet_care_123",
     "database": "pet_care",
     "host": "localhost",
     "dialect": "mysql"
   },
   "production":{
-    "username": "root",
-    "password": "caloja",
+    "username": "pet_care_user",
+    "password": "#Pet_care_123",
     "database": "pet_care",
     "host": "localhost",
     "dialect": "mysql"
