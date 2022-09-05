@@ -15,14 +15,20 @@ var localRouter = require('./src/routes/local.routes');
 var productRouter = require('./src/routes/product.routes');
 var inventoryRouter = require('./src/routes/inventory.routes');
 
+// Add cors to allow cross-origin requests
+var cors = require('cors');
+
 var app = express();
 const db= require('./src/models');
 db.sequelize.sync({force:  true});
+
 // view engine setup
 app.set('views', path.join(__dirname, 'src/views'));
 app.set('view engine', 'jade');
 
 app.use(logger('dev'));
+app.use(cors())
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());

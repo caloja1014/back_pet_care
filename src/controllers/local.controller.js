@@ -3,13 +3,15 @@ const Local = db.local;
 const Op = db.Sequelize.Op;
 
 exports.create = async (req, res) => {
-    if (!req.body.id || !req.body.name || !req.body.latitude || !req.body.longitude || !req.body.description || !req.body.isVeterinary || !req.body.smallDescription || !req.body.ownerIdentification) {
+    console.log(req.body);
+    if ( !req.body.name || !req.body.latitude || !req.body.longitude || !req.body.description || !req.body.isVeterinary || !req.body.smallDescription || !req.body.ownerIdentification) {
         res.status(400).send({
             message: "Content can not be empty!"
         });
+        return;
     }
+
     const local = {
-        id: req.body.id,
         name: req.body.name,
         latitude: req.body.latitude,
         longitude: req.body.longitude,
